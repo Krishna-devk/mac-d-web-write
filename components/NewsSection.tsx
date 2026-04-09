@@ -33,9 +33,9 @@ export default function NewsSection() {
     {
       id: 4,
       category: "HIGHLIGHTS",
-      title: "Signature Collection by McDonald's",
-      desc: "Elevate your meal experience with the new Signature Collection – crafted for the discerning palate.",
-      image: "https://mcdindia.com/wp-content/uploads/2025/12/website-banner-1-1.jpg",
+      title: "The Signature Growth Strategy",
+      desc: "Supercharge your business with our proprietary growth framework. Tailored strategies designed to take your startup from local presence to global dominance.",
+      image: "/images/signature_growth_strategy_news.png",
       date: "December 2025",
       featured: false,
     },
