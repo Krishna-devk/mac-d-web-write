@@ -2,7 +2,7 @@ export const heroSlides = [
   {
     id: 1,
     shadowText: "Fuel Your Startup Journey ",
-    mainText: "From Idea to Impact 🤜🤛",
+    mainText: "From Idea to Impact ",
     imageUrl: "/images/girl_on_computer.png",
     link: null,
   },
