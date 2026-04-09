@@ -1,0 +1,192 @@
+.section {
+  background: #fff;
+  padding: 60px 0;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 60px;
+  align-items: start;
+}
+.searchColumn {
+  /* No specific styles needed for desktop beyond grid placement */
+}
+.searchFieldWrapper {
+  position: relative;
+  margin-bottom: 24px;
+}
+.title {
+  font-size: 28px;
+  font-weight: 900;
+  color: #292929;
+  margin-bottom: 24px;
+}
+.cityInput {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 2px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  z-index: 100;
+  max-height: 220px;
+  overflow-y: auto;
+}
+.dropdownItem {
+  padding: 12px 18px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.15s;
+}
+.dropdownItem:hover {
+  background: #fff8e1;
+}
+.resultText {
+  font-size: 15px;
+  color: #777;
+  margin-bottom: 20px;
+}
+.highlight {
+  color: #DA291C;
+}
+.filterLabel {
+  font-size: 13px;
+  font-weight: 700;
+  color: #555;
+  margin-bottom: 10px;
+}
+.filterButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.filterBtn {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.rightColumn {
+}
+.mainTitle {
+  font-size: 40px;
+  font-weight: 900;
+  color: #292929;
+  margin-bottom: 28px;
+  line-height: 1.1;
+}
+.storeList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+.storeCard {
+  border: 1.5px solid #eee;
+  border-radius: 10px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s;
+}
+.storeCard:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+.storeAddress {
+  font-weight: 600;
+  font-size: 15px;
+  color: #292929;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.storeStatus {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+.statusOpen {
+  font-size: 13px;
+  color: #22a050;
+  font-weight: 600;
+}
+.statusClosed {
+  font-size: 13px;
+  color: #DA291C;
+  font-weight: 600;
+}
+.storeLinks {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.phoneLink {
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+.mapsLink {
+  font-size: 13px;
+  color: #DA291C;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid #DA291C;
+  padding-bottom: 1px;
+}
+.storeTags {
+  margin-top: 10px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.tag {
+  font-size: 11px;
+  background: #fff8e1;
+  color: #b8860b;
+  border: 1px solid #FFBC0D;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 40px 0;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .mainTitle {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  .storeList {
+    max-height: none;
+    overflow-y: visible;
+    padding-right: 0;
+  }
+}

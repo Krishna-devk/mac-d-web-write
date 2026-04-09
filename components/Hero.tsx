@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
   const textLines = slide.mainText.split('\n');
 
   const content = (
-    <div className={styles.heroContentWrapper}>
+    <>
       <div className={styles.textContent}>
         <p className={styles.heroSubHeading}>{slide.shadowText}</p>
         <h1 className={styles.heroTitle}>
@@ -33,13 +33,21 @@ const Hero: React.FC = () => {
           <svg width="20" height="20" viewBox="0 0 512 512" fill="currentColor"><path d="M144 505.6c8 0 16-3.2 22.4-8l240-225.6c6.4-6.4 9.6-14.4 9.6-22.4s-3.2-16-9.6-22.4l-240-224c-12.8-12.8-32-12.8-44.8 0s-11.2 32 1.6 44.8l214.4 201.6-216 203.2c-12.8 11.2-12.8 32 0 44.8 6.4 4.8 14.4 8 22.4 8z"/></svg>
         </button>
       </div>
-    </div>
+    </>
   );
 
   return (
     <section className={styles.hero} id="hero">
       {/* Yellow left panel */}
-      {slide.link ? <Link href={slide.link} target="_blank" className={styles.heroContentLink}>{content}</Link> : content}
+      {slide.link ? (
+        <Link href={slide.link} target="_blank" className={styles.heroContentPanel}>
+          {content}
+        </Link>
+      ) : (
+        <div className={styles.heroContentPanel}>
+          {content}
+        </div>
+      )}
 
       {/* Decorative stripes */}
       <div className={styles.stripeMain} />

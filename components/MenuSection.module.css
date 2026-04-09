@@ -1,0 +1,229 @@
+.section {
+  background: #fff;
+  padding: 0 0 60px 0;
+}
+.tabNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  border-bottom: 2px solid #eee;
+  background: #fff;
+  flex-wrap: wrap;
+  padding-top: 50px;
+}
+.tabBtn {
+  background: none;
+  border: none;
+  padding: 20px 28px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: -2px;
+  transition: color 0.2s, border-color 0.2s;
+  font-family: inherit;
+}
+.tabBtnActive {
+  color: #DA291C;
+  border-bottom: 3px solid #DA291C;
+}
+.tabBtnInactive {
+  color: #292929;
+  border-bottom: 3px solid transparent;
+}
+.tabDivider {
+  color: #ccc;
+  font-size: 22px;
+  font-weight: 300;
+}
+.menuLink {
+  padding: 20px 28px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #DA291C;
+  text-decoration: none;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+.itemName {
+  font-size: 36px;
+  font-weight: 900;
+  color: #292929;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+.itemTagline {
+  font-size: 18px;
+  font-style: italic;
+  color: #DA291C;
+  margin-bottom: 16px;
+}
+.itemDesc {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+.servingInfo {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+.allergenInfo {
+  font-size: 13px;
+  color: #DA291C;
+  margin-bottom: 32px;
+}
+.nutritionGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+}
+.nutritionItem {
+  text-align: center;
+}
+.nutritionLabel {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 4px;
+}
+.nutritionValue {
+  font-size: 14px;
+  font-weight: 700;
+  color: #292929;
+}
+.navControls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+.navBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.prevBtn {
+  border: 2px solid #DA291C;
+  background: transparent;
+  color: #DA291C;
+}
+.nextBtn {
+  border: 2px solid #DA291C;
+  background: #DA291C;
+  color: #fff;
+}
+.navIndicator {
+  font-size: 14px;
+  color: #777;
+}
+.imageColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.mainImageWrapper {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1;
+  position: relative;
+}
+.mainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.ingredientsBox {
+  background: #fff8e1;
+  border-radius: 8px;
+  padding: 16px 20px;
+  width: 100%;
+  max-width: 400px;
+}
+.ingredientsTitle {
+  font-weight: 700;
+  font-size: 14px;
+  color: #292929;
+  margin-bottom: 6px;
+}
+.ingredientsText {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+}
+.thumbnailStrip {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 420px;
+}
+.thumbnailBtn {
+  width: 52px;
+  height: 52px;
+  border-radius: 8px;
+  background: #fff;
+  padding: 4px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .nutritionGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .itemName {
+    font-size: 28px;
+  }
+  .navControls {
+    justify-content: center;
+  }
+  .imageColumn {
+    grid-row: 1; /* Move image above text on mobile */
+  }
+  .tabBtn {
+    padding: 14px 16px;
+    font-size: 16px;
+  }
+  .menuLink {
+    padding: 14px 16px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nutritionGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tabBtn {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+}

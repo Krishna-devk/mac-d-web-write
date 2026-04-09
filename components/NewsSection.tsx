@@ -1,12 +1,13 @@
-"use client";
+import React from 'react';
+import styles from './NewsSection.module.css';
 
 export default function NewsSection() {
   const news = [
     {
       id: 1,
       category: "HIGHLIGHTS",
-      title: "Buddy Meal – Grab a Meal for Two",
-      desc: "Introducing the all-new Buddy Meal. A 4-piece meal starting at just ₹119. Share the joy of McDonald's with your favourite person.",
+      title: "Fuel Your Startup Journey — From Idea to Impact",
+      desc: "Discover how our AI-powered platform transforms your business idea into a market-ready product with intelligent automation, data-driven insights, and end-to-end development support.",
       image: "https://mcdindia.com/wp-content/uploads/2026/03/sara-banner-digital-1_digital-banner-22.jpg",
       date: "March 2026",
       featured: true,
@@ -44,64 +45,50 @@ export default function NewsSection() {
   const rest = news.filter((n) => !n.featured);
 
   return (
-    <section id="news" style={{ background: '#f5f5f5', padding: '80px 0' }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '28px', alignItems: 'start' }}>
+    <section id="news" className={styles.section}>
+      <div className={styles.container}>
+        <div className={styles.grid}>
           {/* Featured card */}
-          <div style={{
-            background: '#fff',
-            borderRadius: '16px',
-            overflow: 'hidden',
-            boxShadow: '0 4px 20px rgba(0,0,0,0.07)',
-            gridRow: 'span 2',
-          }}>
-            <div style={{ height: '280px', overflow: 'hidden' }}>
+          <div className={styles.featuredCard}>
+            <div className={styles.featuredImageWrapper}>
               <img
                 src={featured.image}
                 alt={featured.title}
-                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 0.4s ease' }}
+                className={styles.image}
               />
             </div>
-            <div style={{ padding: '28px' }}>
-              <span style={{ fontSize: '11px', fontWeight: 800, letterSpacing: '2px', color: '#DA291C', display: 'block', marginBottom: '10px' }}>
+            <div className={styles.featuredContent}>
+              <span className={styles.category}>
                 {featured.category}
               </span>
-              <h2 style={{ fontSize: '26px', fontWeight: 900, color: '#292929', marginBottom: '14px', lineHeight: 1.3 }}>
+              <h2 className={styles.featuredTitle}>
                 {featured.title}
               </h2>
-              <p style={{ fontSize: '15px', color: '#666', lineHeight: 1.7, marginBottom: '20px' }}>
+              <p className={styles.featuredDesc}>
                 {featured.desc}
               </p>
-              <span style={{ fontSize: '13px', color: '#999' }}>{featured.date}</span>
+              <span className={styles.date}>{featured.date}</span>
             </div>
           </div>
 
           {/* Secondary cards */}
           {rest.map((item) => (
-            <div key={item.id} style={{
-              background: '#fff',
-              borderRadius: '16px',
-              overflow: 'hidden',
-              boxShadow: '0 4px 20px rgba(0,0,0,0.07)',
-              display: 'flex',
-              gap: '0',
-              flexDirection: 'column',
-            }}>
-              <div style={{ height: '180px', overflow: 'hidden', flexShrink: 0 }}>
+            <div key={item.id} className={styles.regularCard}>
+              <div className={styles.regularImageWrapper}>
                 <img
                   src={item.image}
                   alt={item.title}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                  className={styles.image}
                 />
               </div>
-              <div style={{ padding: '20px' }}>
-                <span style={{ fontSize: '11px', fontWeight: 800, letterSpacing: '2px', color: '#DA291C', display: 'block', marginBottom: '8px' }}>
+              <div className={styles.regularContent}>
+                <span className={styles.category}>
                   {item.category}
                 </span>
-                <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#292929', marginBottom: '8px', lineHeight: 1.3 }}>
+                <h3 className={styles.regularTitle}>
                   {item.title}
                 </h3>
-                <p style={{ fontSize: '14px', color: '#666', lineHeight: 1.6 }}>
+                <p className={styles.regularDesc}>
                   {item.desc}
                 </p>
               </div>

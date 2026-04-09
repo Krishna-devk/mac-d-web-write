@@ -1,5 +1,7 @@
 "use client";
 
+import styles from './Footer.module.css';
+
 export default function Footer() {
   const links = [
     { group: 'Company', items: [
@@ -28,22 +30,22 @@ export default function Footer() {
   ];
 
   return (
-    <footer id="footer" style={{ background: '#292929', color: '#fff', padding: '60px 0 0' }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 40px' }}>
+    <footer id="footer" className={styles.footer}>
+      <div className={styles.container}>
         {/* Top row */}
-        <div style={{ display: 'grid', gridTemplateColumns: '220px repeat(4, 1fr)', gap: '40px', marginBottom: '60px', flexWrap: 'wrap' }}>
+        <div className={styles.topRow}>
           {/* Brand */}
           <div>
             <img
               src="/images/new_logo.png"
               alt="McDelivery Logo"
-              style={{ width: 60, marginBottom: 20, filter: 'brightness(0) invert(1)' }}
+              className={styles.brandLogo}
             />
-            <p style={{ fontSize: '13px', color: '#aaa', lineHeight: 1.7 }}>
+            <p className={styles.brandText}>
               McDonald's India (West & South)<br />
               Connaught Plaza Restaurants Pvt. Ltd.
             </p>
-            <p style={{ fontSize: '12px', color: '#888', marginTop: '12px' }}>
+            <p className={styles.brandSubtext}>
               Serving happiness since 1996.
             </p>
           </div>
@@ -51,17 +53,15 @@ export default function Footer() {
           {/* Link groups */}
           {links.map((group) => (
             <div key={group.group}>
-              <h4 style={{ fontSize: '13px', fontWeight: 800, letterSpacing: '1.5px', color: '#FFBC0D', marginBottom: '16px', textTransform: 'uppercase' }}>
+              <h4 className={styles.groupTitle}>
                 {group.group}
               </h4>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+              <ul className={styles.groupList}>
                 {group.items.map((item) => (
-                  <li key={item.label} style={{ marginBottom: '10px' }}>
+                  <li key={item.label} className={styles.groupListItem}>
                     <a
                       href={item.href}
-                      style={{ color: '#bbb', fontSize: '14px', textDecoration: 'none', transition: 'color 0.2s', lineHeight: 1.5 }}
-                      onMouseEnter={(e) => (e.currentTarget.style.color = '#FFBC0D')}
-                      onMouseLeave={(e) => (e.currentTarget.style.color = '#bbb')}
+                      className={styles.groupLink}
                     >
                       {item.label}
                     </a>
@@ -73,27 +73,26 @@ export default function Footer() {
         </div>
 
         {/* Disclaimer */}
-        <div style={{ borderTop: '1px solid #3a3a3a', padding: '24px 0', marginBottom: '20px' }}>
-          <p style={{ fontSize: '12px', color: '#666', lineHeight: 1.7, maxWidth: '900px' }}>
+        <div className={styles.disclaimer}>
+          <p className={styles.disclaimerText}>
             The calorie information provided on this website is for indicative purposes only. Calorie values may differ based on regional recipes and serving sizes. 
             This website is operated by Connaught Plaza Restaurants Pvt. Ltd. for McDonald's India (North & East region). All content © 2024 McDonald's India.
           </p>
-          <p style={{ fontSize: '12px', color: '#666', marginTop: '8px' }}>
+          <p className={styles.disclaimerSubtext}>
             ⚠️ Beware of fraudulent claims or fake job offers in the name of McDonald's. We never ask for money.
           </p>
         </div>
 
         {/* Bottom bar */}
-        <div style={{ borderTop: '1px solid #3a3a3a', padding: '20px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
-          <p style={{ fontSize: '12px', color: '#666' }}>
+        <div className={styles.bottomBar}>
+          <p className={styles.copyright}>
             © {new Date().getFullYear()} McDonald's. All Rights Reserved.
           </p>
-          <div style={{ display: 'flex', gap: '20px' }}>
+          <div className={styles.bottomLinks}>
             {['Privacy Policy', 'Terms of Use', 'Accessibility'].map((l) => (
-              <a key={l} href="#" style={{ fontSize: '12px', color: '#666', textDecoration: 'none', transition: 'color 0.2s' }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = '#FFBC0D')}
-                onMouseLeave={(e) => (e.currentTarget.style.color = '#666')}
-              >{l}</a>
+              <a key={l} href="#" className={styles.bottomLink}>
+                {l}
+              </a>
             ))}
           </div>
         </div>

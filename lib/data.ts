@@ -1,8 +1,8 @@
 export const heroSlides = [
   {
     id: 1,
-    shadowText: "Buddy Meal",
-    mainText: "Grab a Meal for\nTwo 🤜🤛",
+    shadowText: "Fuel Your Startup Journey ",
+    mainText: "From Idea to Impact 🤜🤛",
     imageUrl: "/images/girl_on_computer.png",
     link: null,
   },

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import styles from './SubscribeSection.module.css';
 
 const socials = [
   { name: 'Facebook', href: 'https://www.facebook.com/McDonaldsIndia', color: '#1877F2', icon: (
@@ -33,22 +34,22 @@ export default function SubscribeSection() {
   };
 
   return (
-    <section id="subscribe" style={{ background: '#EBEBEC', padding: '80px 0', position: 'relative', overflow: 'hidden' }}>
-      <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 40px', display: 'flex', alignItems: 'center', gap: '60px', justifyContent: 'space-between', flexWrap: 'wrap' }}>
-        <div style={{ flex: 1, minWidth: '300px' }}>
-          <h1 style={{ fontSize: '50px', fontWeight: 900, color: '#292929', lineHeight: 1.1, marginBottom: '20px' }}>
+    <section id="subscribe" className={styles.section}>
+      <div className={styles.container}>
+        <div className={styles.content}>
+          <h1 className={styles.title}>
             Special Offers<br />&amp; News
           </h1>
-          <p style={{ fontSize: '18px', color: '#555', marginBottom: '32px', lineHeight: 1.6 }}>
+          <p className={styles.desc}>
             Subscribe now for news, promotions and<br />more delivered right to your inbox.
           </p>
 
           {submitted ? (
-            <div style={{ background: '#DA291C', color: '#fff', padding: '16px 24px', borderRadius: '8px', fontWeight: 700, fontSize: '16px', marginBottom: '36px' }}>
+            <div className={styles.successMsg}>
               🎉 Thank you for subscribing!
             </div>
           ) : (
-            <form onSubmit={handleSubmit} style={{ display: 'flex', gap: '14px', marginBottom: '36px', maxWidth: '500px', flexWrap: 'wrap' }}>
+            <form onSubmit={handleSubmit} className={styles.form}>
               <input
                 id="subscribe-email"
                 type="email"
@@ -56,12 +57,12 @@ export default function SubscribeSection() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                style={{ flex: 1, minWidth: '220px', padding: '15px 20px', border: '1.5px solid #ddd', borderRadius: '6px', fontSize: '16px', outline: 'none', fontFamily: 'inherit', background: '#fff' }}
+                className={styles.input}
               />
               <button
                 id="subscribe-submit"
                 type="submit"
-                style={{ background: '#DA291C', color: '#fff', padding: '15px 32px', border: 'none', borderRadius: '6px', fontWeight: 800, fontSize: '16px', cursor: 'pointer', fontFamily: 'inherit', transition: 'background 0.2s', letterSpacing: '0.5px' }}
+                className={styles.submitBtn}
               >
                 Subscribe
               </button>
@@ -69,8 +70,8 @@ export default function SubscribeSection() {
           )}
 
           <div>
-            <p style={{ fontWeight: 700, fontSize: '16px', marginBottom: '14px', color: '#292929' }}>Follow us on:</p>
-            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
+            <p className={styles.socialTitle}>Follow us on:</p>
+            <div className={styles.socialContainer}>
               {socials.map((s) => (
                 <a
                   key={s.name}
@@ -79,21 +80,8 @@ export default function SubscribeSection() {
                   rel="noopener noreferrer"
                   id={`social-${s.name.toLowerCase()}`}
                   title={s.name}
-                  style={{
-                    width: 44,
-                    height: 44,
-                    borderRadius: '50%',
-                    background: s.color,
-                    color: '#fff',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    transition: 'transform 0.2s, opacity 0.2s',
-                    textDecoration: 'none',
-                    flexShrink: 0,
-                  }}
-                  onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.12)'; e.currentTarget.style.opacity = '0.85'; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.opacity = '1'; }}
+                  className={styles.socialIcon}
+                  style={{ background: s.color }}
                 >
                   {s.icon}
                 </a>
@@ -101,17 +89,17 @@ export default function SubscribeSection() {
             </div>
           </div>
 
-          <p style={{ marginTop: '28px', fontSize: '14px', color: '#888' }}>
-            Email: <a href="mailto:info@mcdonaldsindia.com" style={{ color: '#DA291C', textDecoration: 'none' }}>info@mcdonaldsindia.com</a>
+          <p className={styles.contact}>
+            Email: <a href="mailto:info@mcdonaldsindia.com" className={styles.emailLink}>info@mcdonaldsindia.com</a>
           </p>
         </div>
 
         {/* Visual */}
-        <div style={{ flexShrink: 0 }}>
+        <div className={styles.visual}>
           <img
-            src="https://mcdindia.com/wp-content/uploads/2019/12/french-fries.png"
-            alt="McDonald's Fries"
-            style={{ width: '280px', maxWidth: '100%', objectFit: 'contain', filter: 'drop-shadow(0 12px 24px rgba(0,0,0,0.15))' }}
+            src="/images/business_hero.png"
+            alt="Business Executive Support"
+            className={styles.image}
           />
         </div>
       </div>
