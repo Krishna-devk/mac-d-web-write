@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
               <div className={styles.logoRedBox}>
                 <img 
                   src="https://mcdindia.com/wp-content/uploads/2020/01/m-logo-big.svg" 
-                  alt="McDonald's India" 
+                  alt="McDelivery Logo" 
                   className={styles.logoImg}
                 />
               </div>
@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
           <a href="#menu" onClick={(e) => scrollToSection(e, 'services')} className={styles.navItem}>Menu</a>
           {/* <a href="#services" onClick={(e) => scrollToSection(e, 'services')} className={styles.navItem}>What We Do</a> */}
           <a href="#restaurants" onClick={(e) => scrollToSection(e, 'restaurants')} className={styles.navItem}>Restaurants</a>
-          <a href="#mcdelivery" onClick={(e) => scrollToSection(e, 'mcdelivery')} className={styles.navItem}>McDelivery</a>
+          <a href="#mcdelivery" onClick={(e) => scrollToSection(e, 'mcdelivery')} className={styles.navItem}>Services</a>
           <a href="#news" onClick={(e) => scrollToSection(e, 'news')} className={styles.navItem}>News</a>
           <a href="#subscribe" onClick={(e) => scrollToSection(e, 'subscribe')} className={styles.navItem}>Subscribe</a>
           {/* <Link href="/birthday" className={styles.navItem}>Birthday Party</Link>

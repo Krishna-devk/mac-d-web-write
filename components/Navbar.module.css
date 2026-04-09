@@ -59,7 +59,6 @@
   width: 52px;
   height: auto;
   object-fit: contain;
-  filter: brightness(0) invert(1);
 }
 
 /* ── Nav links ─── */

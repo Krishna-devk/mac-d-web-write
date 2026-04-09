@@ -15,7 +15,7 @@ export default function Footer() {
       { label: 'Quality', href: '#' },
     ]},
     { group: 'Services', items: [
-      { label: 'McDelivery', href: '#mcdelivery' },
+      { label: 'Consultancy Services', href: '#mcdelivery' },
       { label: 'Birthday Party', href: 'https://mcdindia.com/birthday-celebrations/' },
       { label: 'Restaurant Locator', href: '#restaurants' },
       { label: 'McCafé', href: '#' },
@@ -35,8 +35,8 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <img
-              src="https://mcdindia.com/wp-content/uploads/2020/01/m-logo-big.svg"
-              alt="McDonald's India"
+              src="/images/new_logo.png"
+              alt="McDelivery Logo"
               style={{ width: 60, marginBottom: 20, filter: 'brightness(0) invert(1)' }}
             />
             <p style={{ fontSize: '13px', color: '#aaa', lineHeight: 1.7 }}>
